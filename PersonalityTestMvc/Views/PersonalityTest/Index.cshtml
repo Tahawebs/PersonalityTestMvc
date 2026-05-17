@@ -1,0 +1,63 @@
+﻿@{
+    ViewBag.Title = "Personality Test";
+}
+
+<h1 class="text-center">🧠 Personality Test</h1>
+<p class="text-center lead">Look at the images below. Click the FIRST one that catches your eye.</p>
+
+<div class="row text-center">
+    <div class="col-md-3 col-sm-6">
+        <form method="post" action="@Url.Action("Result", "PersonalityTest")">
+            <input type="hidden" name="imageKey" value="mountain" />
+            <button type="submit" class="btn btn-link image-card">
+                <img src="https://images.unsplash.com/photo-1533130061792-64b345e4a833?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bW91bnRhaW4lMjBwZWFrfGVufDB8fDB8fHww" alt="Mountain" class="img-thumbnail" style="width:200px;height:150px;" />
+                <p>🏔️ Mountain</p>
+            </button>
+        </form>
+    </div>
+    <div class="col-md-3 col-sm-6">
+        <form method="post" action="@Url.Action("Result", "PersonalityTest")">
+            <input type="hidden" name="imageKey" value="ocean" />
+            <button type="submit" class="btn btn-link image-card">
+                <img src="https://media.istockphoto.com/id/467367026/photo/perfect-sky-and-ocean.jpg?s=612x612&w=0&k=20&c=LZYFRxIhuKQom3l-kR3TLN7GikSJYJz9NRglQ3nngBw=" alt="Ocean" class="img-thumbnail" style="width:200px;height:150px;" />
+                <p>🌊 Ocean</p>
+            </button>
+        </form>
+    </div>
+    <div class="col-md-3 col-sm-6">
+        <form method="post" action="@Url.Action("Result", "PersonalityTest")">
+            <input type="hidden" name="imageKey" value="forest" />
+            <button type="submit" class="btn btn-link image-card">
+                <img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41477-019-0374-3/MediaObjects/41477_2019_374_Figa_HTML.jpg" alt="Forest" class="img-thumbnail" style="width:200px;height:150px;" />
+                <p>🌲 Forest</p>
+            </button>
+        </form>
+    </div>
+    <div class="col-md-3 col-sm-6">
+        <form method="post" action="@Url.Action("Result", "PersonalityTest")">
+            <input type="hidden" name="imageKey" value="desert" />
+            <button type="submit" class="btn btn-link image-card">
+                <img src="https://www.shutterstock.com/image-photo/vast-orange-sand-dune-desert-600nw-2725294555.jpg" alt="Desert" class="img-thumbnail" style="width:200px;height:150px;" />
+                <p>🏜️ Desert</p>
+            </button>
+        </form>
+    </div>
+</div>
+
+<style>
+    .image-card {
+        border: 2px solid #ddd;
+        border-radius: 10px;
+        padding: 10px;
+        transition: 0.2s;
+    }
+    .image-card:hover {
+        border-color: #007bff;
+        transform: scale(1.02);
+        text-decoration: none;
+    }
+    button.image-card {
+        background: none;
+        width: 100%;
+    }
+</style>

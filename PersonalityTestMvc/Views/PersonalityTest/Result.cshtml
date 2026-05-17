@@ -1,0 +1,15 @@
+﻿@model PersonalityTestMvc.Models.PersonalityResult
+
+@{
+    ViewBag.Title = "Your Personality";
+}
+
+<div class="container text-center" style="margin-top: 50px;">
+    <h1>✨ Your Result ✨</h1>
+    <div class="card" style="max-width: 500px; margin: 30px auto; padding: 20px;">
+        <h2>@Model.Title</h2>
+        <p style="font-size: 1.2em;">@Model.Description</p>
+        <hr />
+        @Html.ActionLink("⬅ Take Test Again", "Index", null, new { @class = "btn btn-primary" })
+    </div>
+</div>
